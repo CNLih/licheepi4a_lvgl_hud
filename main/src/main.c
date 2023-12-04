@@ -15,6 +15,7 @@
 #include "lvgl/lvgl.h"
 #include "lvgl/examples/lv_examples.h"
 #include "lvgl/demos/lv_demos.h"
+#include "../../ui/ui.h"
 #if USE_SDL
   #define SDL_MAIN_HANDLED /*To fix SDL's "undefined reference to WinMain" issue*/
   #include <SDL2/SDL.h>
@@ -191,14 +192,18 @@ int main(int argc, char **argv)
 //  lv_example_flex_3();
 //  lv_example_label_1();
 
-  lv_demo_widgets();
+    // lv_demo_test4();
+  // lv_demo_widgets();
 //  lv_demo_keypad_encoder();
 //  lv_demo_benchmark();
 //  lv_demo_stress();
 //  lv_demo_music();
-
+// lv_example_ffmpeg_2();
+// lv_example_arc_1();
+// lv_example_meter_1();
 //  user_image_demo();
-
+  ui_main_screen_init();
+  lv_disp_load_scr(ui_main);
   while(1) {
     /* Periodically call the lv_task handler.
      * It could be done in a timer interrupt or an OS task too.*/
